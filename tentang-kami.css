@@ -1,0 +1,421 @@
+/* Tentang Kami Page Styles */
+
+/* Perjalanan Batik Setya Section */
+.perjalanan-section {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-gray);
+    position: relative;
+    overflow: hidden;
+    padding-top: 120px;
+}
+
+.perjalanan-content {
+    padding: 0 20px 150px;
+}
+
+.perjalanan-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.founder-image {
+    flex-shrink: 0;
+    width: 300px;
+}
+
+.founder-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover; /* Memastikan gambar mengisi penuh kontainer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan halus */
+}
+
+.perjalanan-header h2 {
+    font-size: 2.5rem;
+    color: var(--dark-brown);
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: -10px; /* Sejajar dengan atas gambar */
+    line-height: 1.2; /* Spasi antar baris */
+}
+
+.perjalanan-description p, .perjalanan-history p {
+    color: var(--dark-brown);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: justify; /* Teks rata kiri-kanan */
+}
+
+.perjalanan-history {
+    max-width: 1160px;
+    margin: 0 auto;
+    margin-bottom: 30px; /* Tambahkan baris ini untuk memberi jarak */
+}
+
+/* Batik Showcase Section */
+.batik-showcase-container {
+    width: 100%;
+    background-color: var(--dark-brown);
+    padding-bottom: 35px;
+    position: relative;
+    height: auto;
+    min-height: 250px;
+}
+
+.batik-showcase {
+    width: 40%;
+    position: relative;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 0;
+    margin-top: -120px; /* Mengembalikan nilai asli -120px */
+}
+
+.batik-showcase img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+    object-fit: cover; /* Mengubah ke cover untuk konsistensi dengan gambar lain */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan yang lebih jelas */
+    max-height: 350px; /* Mengatur tinggi maksimum */
+}
+
+/* Visi Misi Section */
+.visi-misi {
+    background-color: #94704952;
+    padding: 60px 0;
+    color: var(--dark-brown);
+    position: relative;
+}
+
+.visi-misi:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background-color: var(--dark-brown);
+}
+
+.visi-misi-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.visi-misi h2 {
+    font-size: 2.5rem;
+    color: var(--dark-brown);
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.visi-content, .misi-content {
+    margin-bottom: 40px;
+    margin-left: 100px; /* Menjorok dari judul utama */
+}
+
+.icon {
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+
+.icon i {
+    font-size: 1.8rem;
+    color: var(--dark-brown);
+}
+
+.visi-content h3, .misi-content h3 {
+    display: inline-block;
+    font-size: 1.8rem;
+    color: var(--dark-brown);
+    vertical-align: middle;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.visi-content p {
+    color: var(--dark-brown);
+    line-height: 1;
+    font-size: 16px;
+    margin-left: 35px;
+    text-align: left; /* Menjaga konsistensi dengan teks lainnya */
+}
+
+.misi-content p {
+    color: var(--dark-brown);
+    line-height: 1;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 35px;
+    text-align: left; /* Menjaga konsistensi dengan teks lainnya */
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .perjalanan-top {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .founder-image {
+        width: 250px;
+        margin: 0 auto 20px;
+    }
+    
+    .founder-image img {
+        border-radius: 20px; /* Mempertahankan sudut melengkung */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .perjalanan-header h2 {
+        text-align: center;
+        margin-top: 0;
+    }
+    
+    .batik-showcase-container {
+        height: auto;
+        min-height: 220px;
+        padding-top: 20px; /* Tambahan padding di atas */
+    }
+    
+    .batik-showcase {
+        width: 60%; /* Mengubah dari 70% menjadi 60% */
+        padding-right: 15px;
+        margin: -80px auto 0; /* Pindahkan ke tengah dan atur margin-top */
+    }
+    
+    .batik-showcase img {
+        border-radius: 20px; /* Mempertahankan sudut melengkung */
+        max-height: 280px; /* Menyesuaikan tinggi maksimal */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .visi-misi {
+        padding: 50px 0;
+    }
+    
+    .visi-misi h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        margin-left: 30px; /* Mengurangi margin */
+        text-align: center; /* Pusatkan pada tablet */
+    }
+    
+    .visi-content, .misi-content {
+        margin-left: 30px; /* Menjorok lebih sedikit pada layar kecil */
+    }
+    
+    .visi-content h3, .misi-content h3 {
+        font-size: 1.6rem;
+    }
+    
+    .icon i {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .perjalanan-section {
+        padding-top: 100px;
+    }
+    
+    .perjalanan-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .founder-image {
+        width: 220px; /* Sedikit lebih lebar */
+    }
+    
+    .founder-image img {
+        border-radius: 20px;
+    }
+    
+    .batik-showcase-container {
+        min-height: 200px;
+        padding-top: 25px; /* Tambahan padding di atas */
+    }
+    
+    .batik-showcase {
+        width: 70%; /* Sesuaikan ukuran */
+        margin: -70px auto 0; /* Diposisikan di tengah dengan margin negatif yang disesuaikan */
+    }
+    
+    .batik-showcase img {
+        border-radius: 20px; /* Mempertahankan sudut melengkung */
+        max-height: 250px;
+    }
+    
+    .visi-misi {
+        padding: 50px 0;
+    }
+    
+    .visi-misi h2 {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        margin-left: 20px; /* Mengurangi margin */
+        text-align: center; /* Tetap pusatkan */
+    }
+    
+    .visi-content, .misi-content {
+        margin-left: 20px; /* Menjorok lebih sedikit pada layar kecil */
+    }
+    
+    .visi-content h3, .misi-content h3 {
+        font-size: 1.6rem;
+    }
+    
+    .icon i {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .perjalanan-section {
+        padding-top: 90px;
+    }
+    
+    .perjalanan-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .perjalanan-content {
+    padding: 0 20px 100px;
+}
+    
+    .founder-image {
+        width: 200px;
+    }
+    
+    .founder-image img {
+        border-radius: 15px; /* Sedikit mengurangi radius untuk layar kecil */
+    }
+    
+    .batik-showcase-container {
+        min-height: 180px;
+        padding-top: 30px; /* Tambahan padding di atas */
+        padding-bottom: 30px;
+    }
+    
+    .batik-showcase {
+        width: 80%; /* Ukuran lebih besar untuk mobile */
+        margin: -90px auto 0; /* Posisi lebih tinggi */
+    }
+    
+    .batik-showcase img {
+        border-radius: 15px; /* Sedikit mengurangi radius untuk konsistensi */
+        max-height: 220px;
+    }
+    
+    .visi-misi {
+        padding: 40px 0;
+    }
+    
+    .visi-misi h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+        margin-left: 0; /* Hilangkan margin */
+        text-align: center;
+    }
+    
+    .visi-content, .misi-content {
+        margin-left: 10px; /* Mengurangi margin */
+        margin-right: 10px;
+    }
+    
+    .visi-content h3, .misi-content h3 {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+    }
+    
+    .icon {
+        margin-left: 20px; /* Sesuaikan margin icon */
+        margin-right: 10px;
+    }
+
+    
+    .icon i {
+        font-size: 1.4rem;
+    }
+    
+    .visi-content p, .misi-content p {
+        font-size: 15px;
+        margin-left: 25px; /* Sesuaikan margin untuk paragraf */
+    }
+}
+
+@media (max-width: 375px) { /* iPhone ukuran kecil */
+    .perjalanan-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .founder-image {
+        width: 180px;
+    }
+    
+    .batik-showcase {
+        width: 85%; /* Lebih lebar lagi untuk smartphone kecil */
+        margin: -50px auto 0;
+    }
+    
+    .batik-showcase img {
+        border-radius: 12px; /* Radius lebih kecil */
+        max-height: 200px;
+    }
+    
+    .visi-misi h2 {
+        font-size: 1.6rem;
+    }
+    
+    .visi-content h3, .misi-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .icon i {
+        font-size: 1.3rem;
+    }
+    
+    .visi-content p, .misi-content p {
+        font-size: 14px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 320px) { /* Smartphone sangat kecil */
+    .founder-image {
+        width: 160px;
+    }
+    
+    .perjalanan-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .batik-showcase {
+        width: 90%;
+        margin: -40px auto 0;
+    }
+    
+    .batik-showcase img {
+        max-height: 180px;
+    }
+}
+
+/* Media query untuk kata 'Setya' di baris baru pada tampilan lebar */
+@media (min-width: 1200px) {
+    .perjalanan-header h2 {
+        font-size: 2.8rem; /* Sedikit lebih besar di layar lebar */
+    }
+}

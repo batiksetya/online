@@ -1,0 +1,302 @@
+/* Kontak Page Styles */
+
+/* Hero Contact Section */
+.contact-hero {
+    height: 500px;
+    background-image: url('img/batik-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 70px; /* Hanya untuk memberikan ruang pada navbar fixed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px); /* Menambahkan efek blur pada background */
+    z-index: 1;
+}
+
+.contact-hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.contact-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.contact-hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+/* Contact Methods Section */
+.contact-methods {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.contact-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    flex: 1;
+    text-align: center;
+    padding: 40px 20px;
+    border-right: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:last-child {
+    border-right: none;
+}
+
+/* Make the entire card clickable */
+.contact-card a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(148, 112, 73, 0.1);
+    border-radius: 10px;
+}
+
+.contact-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--dark-brown);
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    background-color: var(--medium-brown);
+    color: white;
+}
+
+.contact-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--dark-brown);
+}
+
+.contact-card p {
+    color: var(--medium-brown);
+}
+
+/* Map Section */
+.map-section {
+    padding: 30px 0 50px;
+    background-color: #f5f5f5;
+}
+
+.map-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.map-desc {
+    display: flex;
+    justify-content:center;
+    max-width: 1200px;
+}
+
+.map-desc p {
+    max-width: auto;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--dark-brown);
+    margin-top: 15px;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .contact-hero {
+        height: 350px;
+    }
+    
+    .contact-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-cards {
+        flex-wrap: wrap;
+    }
+    
+    .contact-card {
+        flex: 1 1 calc(50% - 20px);
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding: 30px 15px;
+    }
+    
+    .contact-card:nth-child(even) {
+        border-left: 1px solid #ddd;
+    }
+    
+    .contact-card:last-child,
+    .contact-card:nth-last-child(2):nth-child(odd) {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero {
+        height: 300px;
+        margin-top: 70px;
+    }
+    
+    .contact-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .contact-hero-content p {
+        font-size: 1rem;
+    }
+    
+    .contact-methods {
+        padding: 60px 0;
+    }
+    
+    .contact-cards {
+        flex-direction: column;
+    }
+    
+    .contact-card {
+        width: 100%;
+        flex: none;
+        border-left: none !important;
+        border-bottom: 1px solid #ddd;
+        padding: 30px 20px;
+    }
+    
+    .contact-card:last-child {
+        border-bottom: none;
+    }
+    
+    .map {
+        height: 350px;
+    }
+    
+    .map-desc {
+        justify-content: center;
+    }
+    
+    .map-desc p {
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-hero {
+        height: 250px;
+    }
+    
+    .contact-hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-hero-content p {
+        font-size: 0.9rem;
+    }
+    
+    .contact-methods {
+        padding: 40px 0;
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .contact-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .map {
+        height: 300px;
+    }
+    
+    .map-desc p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .contact-hero {
+        height: 230px;
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+}
+
+/* Footer Custom untuk halaman kontak */
+footer#kontak {
+    background-color: #94704952;
+}
+
+/* Override footer color hanya di halaman kontak */
+.kontak-page footer {
+    background-color: #94704952;
+}
